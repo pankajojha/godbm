@@ -1,0 +1,11 @@
+package: github.com/pankajojha/godbm
+import:
+- package: github.com/codegangsta/cli
+  version: ^1.18.1
+- package: github.com/BurntSushi/toml
+  version: ^0.2.0
+- package: github.com/k0kubun/pp
+  version: ^2.2.0
+- package: golang.org/x/crypto
+  subpackages:
+  - ssh

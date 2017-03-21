@@ -1,0 +1,25 @@
+hash: 1e61bb374fe452cb8bac2e9ea3945c133f920b7d1884fd74421868eccea2a297
+updated: 2017-03-21T13:18:16.70653784-05:00
+imports:
+- name: github.com/BurntSushi/toml
+  version: bbd5bb678321a0d6e58f1099321dfa73391c1b6f
+- name: github.com/codegangsta/cli
+  version: 0bdeddeeb0f650497d603c4ad7b20cfe685682f6
+- name: github.com/k0kubun/pp
+  version: 027a6d1765d673d337e687394dbe780dd64e2a1e
+- name: github.com/mattn/go-colorable
+  version: a392f450ea64cee2b268dfaacdc2502b50a22b18
+- name: github.com/mattn/go-isatty
+  version: 57fdcb988a5c543893cc61bce354a6e24ab70022
+- name: golang.org/x/crypto
+  version: 459e26527287adbc2adcc5d0d49abff9a5f315a7
+  subpackages:
+  - ssh
+  - curve25519
+  - ed25519
+  - ed25519/internal/edwards25519
+- name: golang.org/x/sys
+  version: 99f16d856c9836c42d24e7ab64ea72916925fa97
+  subpackages:
+  - unix
+devImports: []
