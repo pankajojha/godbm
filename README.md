@@ -3,15 +3,10 @@ goDBM
 GODBM Database backup between remote hosts (or local) .
 
 ## Feature
-
-- High-speed parallel data fetching with goroutine concurrency
-- Reuse options of connection with TOML configuration
 - GOdbm will release you from an annoying replication setting
 
 # TODO
-- [ ] Currently MySQL only. so adopt to other management systems
-- [ ] Data mask for password, credit-card number, etc...
-- [ ] Response packet regulation and compression for fetched data
+- To add dbmaintain 
 
 ## Install
 ```
@@ -29,17 +24,17 @@ Write down setting file in toml.
   user = "root"
   password = ""
 
-  [database.staging]
+  [database.test]
   host = "xxx.xxx.xxx.xxx"
   management_system = "mysql"
   name = "app_staging"
   user = "root"
   password = ""
 
-  [database.production]
-  host = "yyy.yyy.yyy.yyy"
+  [database.prod]
+  host = "xxx.xxx.xxx.xxx"
   management_system = "mysql"
-  name = "app_production"
+  name = "app_staging"
   user = "root"
   password = ""
 
@@ -47,13 +42,13 @@ Write down setting file in toml.
   [ssh.local]
   host = "localhost" # or "127.0.0.1"
 
-  [ssh.staging]
+  [ssh.test]
   host = "xxx.xxx.xxx.xxx"
   port = "22"
-  user = "timakin"
+  user = "pankajojha"
   key = "~/.ssh/id_rsa_staging"
 
-  [ssh.production]
+  [ssh.prodction]
   host = "yyy.yyy.yyy.yyy"
   port = "22"
   user = "remoteuser"
@@ -62,5 +57,5 @@ Write down setting file in toml.
 ```
 
 ```
-godbm sync -from production -to staging -c config/gopli.toml
+godbm sync -from production -to local -c config/godbm.toml
 ```
